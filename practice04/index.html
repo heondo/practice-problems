@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <script>
+    function bubbbleSort(input){
+      var array = input;
+      var arrLength = array.length;
+      var counter = 0;
+      var something = true;
+      while(something){
+        for (var i = 0; i < arrLength-1; i++){
+          if (array[i] > array[i+1]){
+            var temp = array[i];
+            array[i] = array[i+1];
+            array[i+1] = temp;
+            counter++;
+          }
+        if (counter === 0){
+          something = false;
+        }
+        else{
+          counter = 0;
+        }
+        }
+      }
+      return array;
+    }
+    console.log(bubbbleSort(['mouse', 'cat', 'dog', 'human']))
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

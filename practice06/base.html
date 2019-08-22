@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    function fibonacci(amount){
+      var fib = [0, 1];
+      var todo = amount-2;
+      for (var i =0; i < todo; i++){
+        var newNum = fib[i] + fib[i+1];
+        fib.push(newNum)
+      }
+      return fib;
+    }
+    fibonacci(12);
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

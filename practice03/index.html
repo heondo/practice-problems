@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    function groupArray(array){
+      var tracker = {};
+      var i;
+      for (i in array){
+        var key = typeof array[i];
+        tracker[key] = [];
+      }
+      // now tracker has stuff...
+      console.log(tracker);
+      var arrKeys = Object.entries(tracker);
+      for (i in array){
+        var key = typeof array[i];
+        tracker[key].push(array[i])
+      }
+      return tracker;;
+    }
+    console.log(groupArray(['hello', 34, true, false, 'goodbye', 56, 12, '25', true]))
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

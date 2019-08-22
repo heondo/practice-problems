@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+
+function pigLatin(text){
+  var splitArr = text.split(' ');
+  // once split, map function that changes
+  var firstChar = splitArr.map(indPig);
+  return firstChar.join(' ');
+}
+
+function indPig(text){
+  var string = text;
+  var change = string.slice(0,1).toLowerCase();
+  string += change;
+  return string.slice(1, string.length) + 'ay';
+}
+
+var something = pigLatin('What Is even going on')
+console.log(something)
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

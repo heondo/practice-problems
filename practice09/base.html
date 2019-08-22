@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+function elemWithChars(text, array){
+  // so basically, blow up text.
+  // for each element in the array, check to see if you are able to
+  var result = [];
+  // var targetTextSplit = text.split('');
+  var splitSplitArray = array.map(function(arr){
+    var tempObj = {actualWord: arr};
+    for (var i of arr) {
+      if (tempObj[i]) {
+        tempObj[i]++;
+      }
+      else {
+        tempObj[i] = 1;
+      }
+    }
+    return tempObj;
+  });
+  // okay objects should make this easy
+  var textObj = {};
+  for (var i of text){
+    if (textObj[i]){
+      textObj[i]++;
+    }
+    else{
+      textObj[i] = 1;
+    }
+  };
+  for (var i of splitSplitArray){
+    // looping through list of Objects
+    // with one object, loop through textObjs stuf and compare
+    var eachWordScore = 0;
+    for (var j in textObj){
+      if (textObj[j] > i[j] || !i[j]){
+        eachWordScore++;
+      }
+    }
+    if (eachWordScore === 0){
+      result.push(i.actualWord);
+    }
+  }
+  // WOOOOOW THAT IS SO EASY. Iterate through split split arrays objects. Now, loop through each key in the textObj. If each value in textObj is <= the same key value in splitsplit then add to result
+
+  return result;
+}
+var myArray = ['cat', 'caterpillar', 'whale', 'accurate', 'smile', 'cactus', 'cute'];
+elemWithChars('cat', myArray);
+
+
+
+  // for (var arrayElement of array) {
+  //   // for each element in array, loop through text array
+  //   // and if element exists in arrayElement splice
+  //   var listTextBlown = arrayElement.split();
+  //   var editThis = arrayElement.split();
+  //   var targetLen = text.length;
+  //   var correct = 0;
+  //   for (var textElement in textArr) {
+  //     for (var i in listTextBlown) {
+  //       if (textArr[textElement] === listTextBlown[i]) {
+  //         correct++;
+  //         continue;
+  //       }
+  //     }
+  //   }
+  //   if (correct == targetLen) {
+  //     result.push(arrayElement);
+  //   }
+  // }
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
