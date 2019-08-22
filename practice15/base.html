@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+function numeric_toggles(num){
+  // num is the starting point. Always start off by adding 2, then 3 (negatives);
+  var result = [num*2, num*2+2];
+  // first part is done, now loop through what, a couple more imes
+  var increaser = 3;
+  for (var i = 0; i < 4; i++){
+    var temp1 = Math.abs(result[result.length-1]) + increaser;
+    var temp2 = temp1 + increaser;
+    increaser++;
+    if (i % 2 == 0){
+      temp1 *= -1;
+      temp2 *= -1;
+    }
+    result.push(temp1, temp2);
+  }
+  return result;
+}
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

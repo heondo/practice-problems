@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+function factors(arrays){
+  // i could loop through each number.
+  var result = {}
+  for (var i in arrays){
+    result[arrays[i]] = [];
+    // now for each number in the array i have key.
+    var div = 2;
+    var numberStart = arrays[i];
+    for (var j = 0; j < arrays[i]; j++){
+      if (numberStart%div === 0){
+        result[arrays[i]].push(div);
+        numberStart/=div;
+        div++;
+      }
+      else{
+        div++;
+      }
+    }
+  }
+  return result;
+}
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

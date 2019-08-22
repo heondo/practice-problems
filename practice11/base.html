@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+function evenodd(arr){
+  var odd = [];
+  var even = [];
+  for (var i of arr){
+    if (typeof i == "number"){
+      if (i % 2 === 0) {
+        even.push(i);
+      }
+      else {
+        odd.push(i);
+      }
+    }
+  }
+  return {
+    odd: odd,
+    even: even
+  };
+}
+
+evenodd([2, 5, 1, 6, 8, 2, 20, 'cat', 13, 3])
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
